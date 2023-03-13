@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN" id="bgimg">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>www.Spr_Xzq.com</title>
+<meta name="description" content="www.Spr_Xzq.com">
+<meta name="keywords" content="www.Spr_Xzq.com">
+<link rel="icon" href="" mce_href="/dir/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://www.bootcss.com/p/buttons/css/buttons.css">
+<link rel="stylesheet" type="text/css" href="https://www.bootcss.com/p/buttons/css/showcase.css">
+<link type="text/css" rel="stylesheet" href="style.css" />
+<meta name="referrer" content="no-referrer" />
+<div style="text-align:center;clear:both">
+</div>
+<div class="tooltips">
+<span>
+<audio id='audioPlay' src='src/12.mp3'  autoplay='autoplay' controls='true' hidden='true'  width=330 height="300" frameborder="no" marginwidth="0" marginheight="0"  ></audio> 
+</span>
+</div>
+</head>
+<body  οncοntextmenu=self.event.returnValue=false onselectstart="return false" >
+<div id="top">
+<main id="top_main">
+<div id="top_logo"><img src="src/tx2.png" onmouseover="mouseOver()" onmouseout="mouseOut()" id="mainimg"></div>
+<div id="top_title"><img id="top_title01" alt="" src="src/toptitle01.png">
+<br class="top_hr_style01">
+</div><br><br>
+<div class="showcase-examples l-over l-center">
+  <a href="我的博文" title="我的博文" class="button button-rounded button-plain button-small-caps button-border" target="_blank">我的博文</a>
+  <a href="每日一记" title="每日一记" class="button button-rounded button-plain button-small-caps button-border" target="_blank">每日一记</a>
+  <a href="留言板" title="留言板" class="button button-rounded button-plain button-small-caps button-border"target="_blank" >留言板</a>
+  <a href="美美相册" title="美美相册" class="button button-rounded button-plain button-small-caps button-border" target="_blank" >美美相册</a>
+  <a href="慢生活" title="慢生活" class="button button-rounded button-plain button-small-caps button-border" target="_blank" >慢生活</a>
+    <a href="学无止境" title="学无止境" class="button button-rounded button-plain button-small-caps button-border" target="_blank" >学无止境</a>
+  </div>
+</main>
+</div>
+<footer id="top_footer">
+<span id="top_copyright">
+<hr class="top_hr_style02">
+(°ˊДˋ°)つ友情链接：<a href="#">"欢迎来到肖智强个人博客"</a>
+<hr class="top_hr_style02">
+<a href="#">"欢迎来到我的个人博客"</a> Welcome to my personal blog. <a href=""></a> 	
+</span>
+</footer>
+
+
+</body>
+<script>
+	function mouseOver(){
+		document.getElementById("mainimg").src="src/tx.png";//鼠标悬浮时的旋转图标
+	}
+	function mouseOut()
+	{
+		document.getElementById('mainimg').src ="src/tx2.png"//默认的旋转图标
+	}
+</script>
+<script type="text/javascript">
+	function change(){
+		var bodyBgs = [];
+bodyBgs[1] = "src/1.png";
+bodyBgs[2] = "src/2.png";
+bodyBgs[3] = "src/3.png";
+bodyBgs[4] = "src/1.jpg";
+bodyBgs[5] = "src/1.jpg";
+bodyBgs[6] = "src/1	.jpg";
+bodyBgs[7] = "src/1.jpg";
+bodyBgs[8] = "src/1.jpg";
+bodyBgs[9] = "src/1.jpg";
+bodyBgs[10] = "src/2.jpg";
+bodyBgs[11] = "src/2.jpg";
+bodyBgs[12] = "src/2.jpg";
+		var randomBgIndex = Math.round( Math.random() * 12 );
+		var img1= document.getElementById('bgimg');
+		img1.style.backgroundImage='url(' + bodyBgs[randomBgIndex] + ')';
+	        window.setTimeout(function(){change()},10000);
+	}
+	change();
+</script>
+<script type="text/javascript" src="src/snow.min.js"></script>        
+<script type="text/javascript">
+createSnow('src/', 60);
+</script>
+  <script>
+        function toggleSound() {
+            var music = document.getElementById("audioPlay"); 
+            if (music.paused) { 
+                music.paused=false;
+                music.play(); 
+            }  
+        }
+        setInterval("toggleSound()",1);
+    </script>
+   <script type="text/javascript">
+          window.onload = function() {
+              document.onkeydown = function() {
+                 var e = window.event || arguments[0];
+                 //屏蔽F12
+            if(e.keyCode == 123) {
+            console.log('本网站欢迎您！');
+                return false;
+             //屏蔽Ctrl+Shift+I
+             }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+              console.log('当前提示，本网站禁止审查元素');
+                return false;
+//屏蔽Ctrl+U(火狐下查看网页源代码快捷键)
+}else if((e.ctrlKey) && (e.keyCode == 85)){
+console.log('本网站禁止使用审查元素')
+return false;
+             //屏蔽Shift+F10
+             }else if((e.shiftKey) && (e.keyCode == 121)){
+                console.log('本网站禁止审查元素！');
+return false;
+             }else if(event.ctrlKey  &&  window.event.keyCode==83 ){ 
+                console.log('本网站禁止保存文件！');
+                return false;
+             }
+             };
+             //屏蔽右键单击
+if (window.Event)
+document.captureEvents(Event.MOUSEUP);
+function nocontextmenu()
+{
+event.cancelBubble = true
+event.returnValue = false;
+return false;
+}
+function norightclick(e)
+{if (window.Event)
+{
+if (e.which == 2 || e.which == 3)
+return false;
+}
+else
+if (event.button == 2 || event.button == 3)
+{
+event.cancelBubble = true
+event.returnValue = false;
+return false;
+}
+}
+document.oncontextmenu = nocontextmenu; // for IE5+
+document.onmousedown = norightclick; // for all others
+         }
+     </script>
+</html>
